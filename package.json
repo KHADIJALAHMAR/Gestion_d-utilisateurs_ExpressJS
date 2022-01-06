@@ -1,5 +1,5 @@
 {
-  "name": "Gestion_d-utilisateurs_ExpressJS",
+  "name": "gestion_d-utilisateurs_expressjs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/KHADIJALAHMAR/Gestion_d-utilisateurs_ExpressJS#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

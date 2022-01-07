@@ -4,7 +4,7 @@ const database =require('../config/database');
 
 
 router.get("/all",(req,res) =>{
-    database.Deparetement.findAll()
+    database.Department.findAll()
     .then(Deparetements => res.send(Deparetements))
 })
 module.export = router ;

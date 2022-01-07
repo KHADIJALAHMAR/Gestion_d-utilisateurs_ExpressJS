@@ -3,7 +3,6 @@ const path =require('path');
 const mysql = require('mysql2');
 const app = express();
 
-
 // database
 const database=require('./config/database')
 

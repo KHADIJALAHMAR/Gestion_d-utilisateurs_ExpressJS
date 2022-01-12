@@ -1,17 +1,34 @@
-// const express =require('express');
-// const { append } = require('express/lib/response');
 const express = require('express');
 const router = express.Router();
-// const database =require('../config/database');
 const userController = require('../controllers/userController');
-// const userController = require('../controllers/userController');
-
-// const database =require('../config/database');
 
 
-router.get('/' , userController.getUsers);
-router.get('/user' , userController.getAll)
-module.exports = router ;
+
+// use routers
+// router.post('/adduser', userController.upload , userController.adduser)
+// router.get('/allUsers' , userController.getUsers);
+router.get('/' , userController.getAll)
+
+
+// department Url and Controller
+
+
+
+// router.get('/allDepartment', departmentController.getAllDepartment)
+// router.post('/addDepartment/:id', departmentController.addDepartment)
+
+
+// user  router
+
+
+
+// router.get('/:id', userController.getOneUser)
+
+// router.put('/:id', productController.updateUser)
+
+// router.delete('/:id', productController.deleteUser)
+
+
 
 // router.get('/', userController.getUsers);
 // router.get('/' ,(req, res) => res.send('douaa'))
@@ -19,4 +36,4 @@ module.exports = router ;
 //     database.Department.findAll()
 //     .then(Deparetements => res.send(Deparetements))
 // })
-// module.exports = router ;
+module.exports = router ;

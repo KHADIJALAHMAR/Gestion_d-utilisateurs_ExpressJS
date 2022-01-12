@@ -11,12 +11,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      id:{
-        type:Sequelize.INTEGER(11),
-        allowNull :false ,
-        autoIncremant :true ,
-        primaryKey :true,
-      },
       username :{
         type:Sequelize.STRING(49),
         allowNull :false ,
@@ -30,7 +24,6 @@ module.exports = {
       updatedAt :Sequelize.DATE,
     });
 },
-  
 
   down: async (queryInterface, Sequelize) => {
    return queryInterface.dropTable("Users")

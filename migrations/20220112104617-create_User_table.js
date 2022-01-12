@@ -20,6 +20,7 @@ module.exports = {
         type:Sequelize.STRING(33),
         allowNull :false ,
       },
+      depId :Sequelize.INTEGER(12),
       createdAt :Sequelize.DATE,
       updatedAt :Sequelize.DATE,
     });

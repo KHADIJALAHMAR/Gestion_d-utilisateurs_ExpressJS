@@ -6,35 +6,36 @@ const departmentController = require('../controller/DepartementController');
 
 
 // use routers
-// // router.post('/adduser', userController.upload , userController.adduser)
-router.get('/allUsers' , userController.getAllUsers);
-router.get('/alldepartments' , departmentController.getAllDepartments);
-// router.get('/' , userController.getAll)
+router.get('/' , userController.getAllUsers);
+router.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
+router.post('/adduser', userController.adduser);
+
+
+
+
+
+
 
 // department Url and Controller
-
-
-
-// router.get('/allDepartment', departmentController.getAllDepartment)
-// router.post('/addDepartment/:id', departmentController.addDepartment)
+router.post('/add-departement' , departmentController.createDepartement);
+router.get('/allDepartment', departmentController.getAllDepartment);
+router.get('/add-departement' , (req,res) => { res.render('add_department'); });
 
 
 // user  router
 
+app.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
+
+router.post('update-user/:id', userController.updateUser);
+
+router.delete('delete-user/:id',userController.deleteUser);
+ 
+
+// department  router
 
 
-// router.get('/:id', userController.getOneUser)
+router.post('update-departement/:id', departmentController.updateDepartment);
 
-// router.put('/:id', productController.updateUser)
+router.delete('delete-departement/:id',departmentController.deleteDepartment);
 
-// router.delete('/:id', productController.deleteUser)
-
-
-
-// router.get('/', userController.getUsers);
-// router.get('/' ,(req, res) => res.send('douaa'))
-// router.get("/all",(req,res) =>{
-//     database.Department.findAll()
-//     .then(Deparetements => res.send(Deparetements))
-// })
-// module.exports = router ;
+module.exports = router ;

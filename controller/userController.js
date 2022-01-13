@@ -1,4 +1,4 @@
-const model = require('../models');
+const {} = require('../models');
 
 
 

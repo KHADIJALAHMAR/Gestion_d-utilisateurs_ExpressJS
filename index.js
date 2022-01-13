@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}));
 
 // const userRoute = require('./routes/user');
 
-app.use('/user', userRoute);
+app.use('/', userRoute);
 // app.use('/' ,require('./routes/user'))
 
 database.authenticate()

@@ -1,6 +1,8 @@
-'use strict';
+
 const Sequelize = require('sequelize');
-module.exports = sequelize.define("Department" ,{
+const connexion = require('../config/database');
+module.exports = connexion.define('Department',{
+  
   id:{
     type:Sequelize.INTEGER(11),
     allowNull :false ,

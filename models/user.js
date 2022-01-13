@@ -1,9 +1,8 @@
 
 const Sequelize = require("sequelize");
+const connexion = require('../config/database');
 
-
-
-module.exports = sequelize.define("user" ,{
+module.exports = connexion.define("user" ,{
   id:{
     type:Sequelize.INTEGER(11),
     allowNull :false ,

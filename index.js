@@ -3,12 +3,13 @@ const path =require('path');
 const mysql = require('mysql2');
 const app = express();
 const userRoute = require('./routes/user');
+const {Department ,User} =require('./models/index');
 // const userRoute = require('./routes/user');
 
 // database
 const database=require('./config/database');
 
-app.use('/', userRoute);
+// app.use('/', userRoute);
 // app.use('/' ,require('./routes/user'))
 
 database.authenticate()

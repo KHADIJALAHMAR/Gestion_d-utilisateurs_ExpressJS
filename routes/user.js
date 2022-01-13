@@ -6,6 +6,7 @@ const {Department ,User} =require('../models/index');
 
 
 // use routers
+router.get('/a' ,departmentController.createDepartement);
 router.get('/' , departmentController.getDepartements);
 router.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
 router.get('/departement/:id/users' , userController.getUsersByDepartementId);

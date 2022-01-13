@@ -2,7 +2,7 @@ const express =require('express');
 const path =require('path');
 const app = express();
 const userRoute = require('./routes/user');
-const {Department ,User} =require('./models/index');
+
 
 
 // database connection

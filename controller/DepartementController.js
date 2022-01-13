@@ -6,3 +6,10 @@ const getAllUsers = (req,res) => {
         res.render('depart',{departements});
     })
 };
+
+const getUsersByDepartementId = (req,res) => {
+    Department.findByPk(req.params.id).then(departement => {
+        User.getUsersByDepartementId(req,res,departement);
+    })
+};
+

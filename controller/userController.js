@@ -64,6 +64,10 @@ const addUserToDepartement = (req,res) => {
 //         res.redirect('/departement/' + req.params.id + '/users');
 //     })();
 // };
+module.exports ={
+    addUserToDepartement,
+    getUsersByDepartementId,
+}
 
 
 

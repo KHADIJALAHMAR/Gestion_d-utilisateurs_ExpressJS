@@ -4,7 +4,8 @@ const {Department ,User} =require('../models');
 
 const createDepartement = (req,res) => {
     (async () => {
-        await Department.create({name: req.body.name});
+        await Department.create({name: req.body.name , descreption :req.body.descreption});
+        
         res.redirect('/');
     })();
 };

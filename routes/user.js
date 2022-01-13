@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controller/userController');
+const departmentController = require('../controller/DepartementController');
 
 
 
 // use routers
 // // router.post('/adduser', userController.upload , userController.adduser)
-router.get('/allUsers' , userController.get);
+router.get('/allUsers' , userController.getAllUsers);
+router.get('/alldepartments' , departmentController.getAllDepartments);
 // router.get('/' , userController.getAll)
 
 // department Url and Controller

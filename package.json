@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/KHADIJALAHMAR/Gestion_d-utilisateurs_ExpressJS#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "pg": "^8.7.1",

@@ -6,7 +6,7 @@ const userController = require('../controller/userController');
 
 // use routers
 // // router.post('/adduser', userController.upload , userController.adduser)
-// router.get('/allUsers' , userController.get);
+router.get('/allUsers' , userController.get);
 // router.get('/' , userController.getAll)
 
 // department Url and Controller

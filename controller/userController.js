@@ -22,7 +22,7 @@ const addUserToDepartement = (req,res) => {
 
 const getUserToUpdate = (req,res) => {
     User.findByPk(req.params.id_user).then(user => {
-        res.render('update-user', {user, DepartmentId: req.params.id});
+        res.render('update_user', {user, DepartmentId: req.params.id});
     })
 };
 

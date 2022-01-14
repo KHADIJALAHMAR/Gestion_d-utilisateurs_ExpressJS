@@ -1,0 +1,32 @@
+<%- include('./include/header', {title: 'users'}); %>
+
+<div class="container">
+
+    <h1><%= departement.id !== 'e93f78e1-7213-4d46-be66-c4de8c216a5a' ? departement.name  + " departement users" : 'Pending Users' %></h1>
+    <a class="btn btn-success mt-3" href="<%= '/departement/' + departement.id + '/add-user'%>">Add a User</a>
+    <a class="btn btn-success mt-3" href="/">All departements</a>
+
+    <table class="table table-hover mt-3">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(u => { %>
+                <tr>
+                    <th scope="row"><%= u.username %></th>
+                    <td><%= u.email %></td>
+                    <td><a href="<%= '/departement/' + departement.id + /update-user/ + u.id %>" class="btn btn-warning">Edit</a></td>
+                    <td><a href="<%= '/departement/' + departement.id + /delete-user/ + u.id %>" class="btn btn-danger">Delete</a></td>
+                </tr>        
+            <% }) %>
+        </tbody>
+    </table>
+    
+</div>
+
+<%- include('./include/footer'); %>

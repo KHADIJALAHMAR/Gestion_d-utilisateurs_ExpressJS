@@ -6,7 +6,7 @@ const createDepartement = (req,res) => {
     (async () => {
         await Department.create({name: req.body.name , descreption :req.body.descreption});
         
-        res.redirect('/add-department');
+        res.redirect('/departments');
     })();
 };
 

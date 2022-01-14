@@ -9,7 +9,7 @@ const getUsersByDepartementId = (req,res,departement) => {
             'DepartementId' : departement.id
         }
     }).then(users => {
-        res.render('user',{departement,users})
+        res.render('users',{departement,users})
     })
 }
 

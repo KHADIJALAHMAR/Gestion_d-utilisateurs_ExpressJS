@@ -54,19 +54,21 @@ const addUserToDepartement = (req,res) => {
 //     })
 // };
 
-// const deleteUser = (req,res) => {
-//     (async () => {
-//         await User.destroy({
-//             where: {
-//             id: req.params.userId
-//             }
-//         });
-//         res.redirect('/departement/' + req.params.id + '/users');
-//     })();
-// };
+const deleteUser = (req,res) => {
+    (async () => {
+        await User.destroy({
+            where: {
+            id: req.params.id_user
+            }
+        });
+        res.redirect('/departement/' + req.params.id + '/users');
+
+    })();
+};
 module.exports ={
     addUserToDepartement,
     getUsersByDepartementId,
+    deleteUser ,
 }
 
 

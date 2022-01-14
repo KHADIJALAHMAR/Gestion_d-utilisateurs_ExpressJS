@@ -18,7 +18,8 @@ router.get('/department/:id/users' , userController.getUsersByDepartementId);
 router.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
 router.post('/departement/:id/add-user' ,userController.addUserToDepartement);
 // router.post('update-user/:id', userController.updateUser);
-// router.delete('delete-user/:id',userController.deleteUser);
+
+router.get('/department/:id/delete-user/:id_user',userController.deleteUser);
 
 // router.post('/adduser', userController.addUserToDepartement);
 

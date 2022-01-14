@@ -3,12 +3,14 @@ const Sequelize = require("sequelize");
 const connexion = require('../config/database');
 
 module.exports = connexion.define("user" ,{
-  id:{
-    type:Sequelize.INTEGER(11),
-    allowNull :false ,
-    autoIncremant :true ,
-    primaryKey :true,
-  },
+  id : {
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
+    primaryKey: true,
+    validate:{
+        notEmpty:true,
+    }
+},
   username :{
     type:Sequelize.STRING(49),
     allowNull :false ,

@@ -9,7 +9,7 @@ User.belongsTo(Department);
 console.log("hello");
 
 // Create table of model
-connexion.sync({ force: false }).then(() => {
+connexion.sync({ alter: false }).then(() => {
   console.log("Table Created !");
 });
 

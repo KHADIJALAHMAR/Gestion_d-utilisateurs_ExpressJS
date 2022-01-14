@@ -10,11 +10,13 @@ const {Department ,User} =require('../models/index');
 router.post('/add-department' ,departmentController.createDepartement);
 router.get('/add-department' , (req, res)=>{res.render('add_department')});
 
-router.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
 router.get('/departement/:id/users' , userController.getUsersByDepartementId);
 
 router.get('/departments' , departmentController.getDepartements);
-// app.post('/departement/:id/add-user' , Users.addUserToDepartement);
+router.get('/department/:id/users' , userController.getUsersByDepartementId);
+
+router.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
+router.post('/departement/:id/add-user' ,userController.addUserToDepartement);
 // router.post('update-user/:id', userController.updateUser);
 // router.delete('delete-user/:id',userController.deleteUser);
 

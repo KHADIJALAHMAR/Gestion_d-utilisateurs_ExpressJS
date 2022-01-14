@@ -3,13 +3,13 @@ const { User} =require('../models');
 
 
 
-const getUsersByDepartementId = (req,res,departement) => {
+const getUsersByDepartementId = (req,res) => {
     User.findAll({
         where: {
-            'DepartementId' : departement.id
+            'DepartmentId' : req.params.id
         }
     }).then(users => {
-        res.render('users',{departement,users})
+        res.render('users',{users,id_dep:req.params.id})
     })
 }
 
@@ -26,7 +26,7 @@ const getUsersByDepartementId = (req,res,departement) => {
 
 const addUserToDepartement = (req,res) => {
     (async () => {
-        await User.create({ user_name: req.body.username , user_email: req.body.email,  DepartementId: req.params.id });
+        await User.create({ username: req.body.username , email: req.body.email, password: req.body.password, DepartmentId: req.params.id });
         res.redirect('/departement/'+ req.params.id +'/users');
     })();
 };

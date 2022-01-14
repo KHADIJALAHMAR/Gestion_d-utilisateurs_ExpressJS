@@ -16,15 +16,15 @@ const getUsersByDepartementId = (req,res) => {
 const addUserToDepartement = (req,res) => {
     (async () => {
         await User.create({ username: req.body.username , email: req.body.email, password: req.body.password, DepartmentId: req.params.id });
-        res.redirect('/departement/'+ req.params.id +'/users');
+        res.redirect('/department/'+ req.params.id +'/users');
     })();
 };
 
-// const getUserToUpdate = (req,res) => {
-//     User.findByPk(req.params.userId).then(user => {
-//         res.render('update-user', {user, DepartementId: req.params.id});
-//     })
-// };
+const getUserToUpdate = (req,res) => {
+    User.findByPk(req.params.id_user).then(user => {
+        res.render('update-user', {user, DepartmentId: req.params.id});
+    })
+};
 
 const updateUser = (req,res) => {
     (async () => {
@@ -33,7 +33,7 @@ const updateUser = (req,res) => {
               id: req.params.id_user
             }
           });
-        res.redirect('/departement/' + req.params.id + '/users');
+        res.redirect('/department/' + req.params.id + '/users');
     })();
 };
 
@@ -53,6 +53,7 @@ module.exports ={
     getUsersByDepartementId,
     deleteUser ,
     updateUser,
+    getUserToUpdate,
 }
 
 

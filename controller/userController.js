@@ -26,7 +26,7 @@ const getUsersByDepartementId = (req,res,departement) => {
 
 const addUserToDepartement = (req,res) => {
     (async () => {
-        await User.create({ user_name: req.body.username , user_email: req.body.email, user_age: req.body.age, DepartementId: req.params.id });
+        await User.create({ user_name: req.body.username , user_email: req.body.email,  DepartementId: req.params.id });
         res.redirect('/departement/'+ req.params.id +'/users');
     })();
 };

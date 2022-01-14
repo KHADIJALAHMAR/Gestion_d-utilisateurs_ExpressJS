@@ -6,14 +6,14 @@ const createDepartement = (req,res) => {
     (async () => {
         await Department.create({name: req.body.name , descreption :req.body.descreption});
         
-        res.redirect('/');
+        res.redirect('/add-department');
     })();
 };
 
 
 const getDepartements= (req,res) => {
     Department.findAll().then(departements => {
-        res.render('depart',{departements});
+        res.render('All_department',{departements});
     })
 };
 

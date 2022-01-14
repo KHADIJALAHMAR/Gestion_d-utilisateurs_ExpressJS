@@ -7,9 +7,9 @@ const {Department ,User} =require('../models/index');
 
 // use routers
 
-router.post('/add-departement' ,departmentController.createDepartement);
-router.get('/add-departement' , (req, res)=>{res.render('add_department')});
-router.get('/' , departmentController.getDepartements);
+router.post('/add-department' ,departmentController.createDepartement);
+router.get('/add-department' , (req, res)=>{res.render('add_department')})
+router.get('/getdepartement' , departmentController.getDepartements);
 router.get('/departement/:id/add-user' , (req,res) => { res.render('add_user',{DepartementId : req.params.id}); });
 router.get('/departement/:id/users' , userController.getUsersByDepartementId);
 

@@ -1,0 +1,31 @@
+<%- include('./include/header', {title: 'All_departements'}); %>
+<div class="container">
+    <a href="/departement/e93f78e1-7213-4d46-be66-c4de8c216a5a/users" class="btn btn-info mt-3">See pending users</a>
+    <a class="btn btn-success mt-3" href="/add-departement">Add a Departement</a>
+    <table class="table table-hover mt-3">
+        <thead>
+          <tr>
+            <th scope="col">name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%  departements.forEach(d => {
+                    if(d.id !== 'e93f78e1-7213-4d46-be66-c4de8c216a5a'){
+            %>
+                <tr>
+                    <th scope="row"><a href="<%= '/departement/' + d.id + '/users' %>" ><%= d.name %></a></th>
+                    <!-- <td><a href="<%= '/update-departement/' + d.id %>" class="btn btn-warning">Edit</a></td>
+                    <td><a href="<%= '/delete-departement/' + d.id %>" class="btn btn-danger">Delete</a></td> -->
+                </tr>        
+            <% 
+                    }
+                })
+             %>
+        </tbody>
+    </table>
+    
+</div>
+
+<%- include('./include/footer'); %>

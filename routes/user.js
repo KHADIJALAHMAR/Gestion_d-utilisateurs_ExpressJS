@@ -20,7 +20,8 @@ router.post('/departement/:id/add-user' ,userController.addUserToDepartement);
 router.get('/departement/:id/delete-user/:id_user',userController.deleteUser);
 
 router.get('/department/:id/update-user/:id_user', userController.getUserToUpdate);
-router.post('update-user/:id', userController.updateUser);
+router.post('/department/:id/update-user/:id_user', userController.updateUser);
+
 
 
 

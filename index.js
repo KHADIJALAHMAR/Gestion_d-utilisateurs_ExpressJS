@@ -35,5 +35,5 @@ database.authenticate()
 
 
 
-const PORT = 3000 || process.env.PORT ;
+const PORT = 4000 || process.env.PORT ;
 app.listen(PORT ,() => console.log(`app running on ${PORT} port`));

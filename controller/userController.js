@@ -44,7 +44,7 @@ const deleteUser = (req,res) => {
             id: req.params.id_user
             }
         });
-        res.redirect('/departement/' + req.params.id + '/users');
+        res.redirect('/department/' + req.params.id + '/users');
 
     })();
 };

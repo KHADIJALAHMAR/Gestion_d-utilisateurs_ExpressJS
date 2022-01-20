@@ -1,7 +1,7 @@
 <%- include('./include/header', {title: 'departements'}); %>
 
 <div class="container">
-    <form action="<%= '/department/' + id_dep + '/update-user/' + user.id %>" method="POST">
+    <form action="<%= '/department/' + DepartmentId + '/update-user/' + user.id %>" method="POST">
         <div class="form-group">
           <label for="user-name">username</label>
           <input type="text" name='username' class="form-control" id="user-name" placeholder="Enter new Username" value="<%= user.username %>">

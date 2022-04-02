@@ -15,23 +15,16 @@ const Users = require('./controller/UserController');
 // specifying the views path and the template engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.json());
+// app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-// const userRoute = require('./routes/user');
-
 app.use('/', userRoute);
-// app.use('/' ,require('./routes/user'))
+
 
 database.authenticate()
 .then(()=>console.log('Database connect'))
 .catch(err => console.log('Error : '+err))
 
-
-
-
-// app.get('/',(req ,res) =>
-// res.send('hello'));
 
 
 
